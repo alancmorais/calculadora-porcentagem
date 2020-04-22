@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Calculadora de Porcentagem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <img src="https://www.colegiopectrus.com.br/images/logo.png" width="200">
+        <span class="navbar-brand mb-0 h1">Calculadora de Matemática - Porcentagem</span>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Porcentagem ou percentagem é usada para calcular descontos, acréscimo de preços, lucros, etc. Abaixo
+                    um exemplo de como calcular a porcentagem usando regra de 3.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://www.colegiopectrus.com.br/images/porcentagem.png">
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="valor1">Valor 1</label>
+                    <input type="number" class="form-control" id="valor1">
+                </div>
+                =
+                <div class="form-group col-md-3">
+                    <label for="porcentagem1">Porcentagem 1</label>
+                    <input type="number" class="form-control" id="porcentagem1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="valor2">Valor 2</label>
+                    <input type="number" class="form-control" id="valor2">
+                </div>
+                =
+                <div class="form-group col-md-3">
+                    <label for="porcentagem2">Porcentagem 2</label>
+                    <input type="number" class="form-control" id="porcentagem2" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <button type="button" class="btn btn-primary" onclick="CalculaPorcentagem()">Calcular</button>
+                </div>
+            </div>
+        </form>
+        <script>
+            function CalculaPorcentagem() {
+
+            var valor1 = document.getElementById("valor1").value;
+            var valor2 = document.getElementById("valor2").value;
+            var porcentagem1 = document.getElementById("porcentagem1").value;
+
+            var porcentagem2 = (valor1 * valor2) / porcentagem1;
+
+            var porcentagem2Temp = document.getElementById("porcentagem2");
+            porcentagem2Temp.value = porcentagem2;
+
+        }
+        </script>
+</body>
+</html>
